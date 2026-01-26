@@ -8,20 +8,11 @@ body {
 
 
 div {
-  padding-right: 50px;
   height: 100%;
   width: 100%;
 }
 
-.nav {
-  background-color: #FFEE00;
-  max-width: 25%;
-  min-width: 140px;
-  flex: 1;
+.yellow {
+  background-color: goldenrod;
 }
 
-.scarecrow-img{
-    padding-left: 20px;
-    max-width: 100%;
-
-}
