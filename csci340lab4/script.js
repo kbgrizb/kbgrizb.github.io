@@ -12,5 +12,16 @@ $(document).ready(function() {
         console.log(error);
       }
     });
+
+    $.ajax({
+      dataType: "json",
+      url: "https://randomfox.ca/floof/",
+      success: function(results) {
+        $('#fox').attr('src', results.image).show();
+      },
+      error: function(xhr,status,error) {
+        console.log(error);
+      }
+    });
   });
 });
