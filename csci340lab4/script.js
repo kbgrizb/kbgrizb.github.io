@@ -19,9 +19,14 @@ function getPoem() {
       poem = results[0];
       lines = poem.lines;
 
+      if (lines.length > 40){
+        getPoem();
+      }else{
+
       $('#poem-title').text(poem.title);
       $('#poem-author').text("by " + poem.author);
       $('#poem').html(lines.join('<br>'));
+      }
     
     },
     error: function (xhr, status, error) {
