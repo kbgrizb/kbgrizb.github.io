@@ -1,10 +1,15 @@
 $(document).ready(function () {
 
-  $('#clicker').click(function () {
+  $('#poem-clicker').click(function () {
     getPoem();
+  });
+
+  $('#fox-clicker').click(function () {
     getFox();
   });
+
 });
+
 
 function getPoem() {
   $.ajax({
@@ -14,9 +19,9 @@ function getPoem() {
       poem = results[0];
       lines = poem.lines;
 
-      $('#poem-title').text(results[0].title);
-      $('#poem-author').text("by " + results[0].author);
-      $('#poem').text(results[0].lines);
+      $('#poem-title').text(poem.title);
+      $('#poem-author').text("by " + poem.author);
+      $('#poem').html(lines.join('<br>'));
     
     },
     error: function (xhr, status, error) {
